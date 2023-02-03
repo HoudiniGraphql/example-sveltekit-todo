@@ -2,19 +2,11 @@
 
 This is an example houdini project built with SvelteKit.
 
-## Getting started - in your machine
+## 🖥️ On your machine
 
-```bash
-git clone ...
+```sh
+git clone git@github.com:HoudiniGraphql/example-sveltekit-todo.git
+
 pnpm i
 pnpm dev
 ```
-
-## Getting started - in the cloud
-
-<a
-target="\_blank"
-href="https://stackblitz.com/fork/github/houdinigraphql/example-sveltekit-todo?title=Houdini%20sveltekit%20Todo"
-
->   <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open in StackBlitz" />
-> </a>
