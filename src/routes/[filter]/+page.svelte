@@ -50,7 +50,7 @@
 	})
 
 	let inputValue = ''
-	async function onBlur() {
+	async function addInput() {
 		if (inputValue) {
 			// trigger the mutation
 			await addItem.mutate({ input: { text: inputValue } })
@@ -74,7 +74,12 @@
 		class="new-todo"
 		placeholder="What needs to be done?"
 		bind:value={inputValue}
-		on:blur={onBlur}
+		on:blur={addInput}
+		on:keyup={(event) => {
+			if (event.key === 'Enter') {
+				addInput()
+			}
+		}}
 	/>
 </header>
 <section class="main">

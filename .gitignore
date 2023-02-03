@@ -1,1 +1,3 @@
-#git keep
+node_modules
+.svelte-kit
+$houdini
