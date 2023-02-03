@@ -1,5 +1,0 @@
-mutation DeleteBook($book: ID!) {
-  deleteBook(book: $book) {
-    id @Book_delete
-  }
-}

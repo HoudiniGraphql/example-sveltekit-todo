@@ -1,51 +1,31 @@
 {
-	"name": "houdini-monorepo",
-	"private": true,
-	"version": "0.16.8",
-	"description": "The disappearing graphql client for SvelteKit",
-	"type": "module",
-	"scripts": {
-		"tests": "vitest",
-		"tests:ui": "vitest --ui --coverage",
-		"test": "pnpm run tests",
-		"build:all": "turbo build",
-		"build": "turbo build --filter=\"./packages/*\"",
-		"dev": "turbo dev --filter=\"./packages/*\"",
-		"compile:all": "turbo compile",
-		"compile": "turbo compile --filter=\"./packages/*\"",
-		"typedefs:all": "turbo run typedefs",
-		"typedefs": "turbo run typedefs --filter=\"./packages/*\"",
-		"lint": "eslint --ignore-path .prettierignore \"./packages/*/src/**/*.ts\"",
-		"format": "prettier \"packages/**/*.ts\"",
-		"format:write": "npm run format -- -w",
-		"format:check": "npm run format -- --check",
-		"version": "changeset version",
-		"release": "pnpm run build && changeset publish",
-		"postinstall": "node -e \"try { require('husky').install(); console.log('ran prepack') } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
-		"prepack": "pinst --disable",
-		"postpack": "pinst --enable"
-	},
-	"devDependencies": {
-		"@changesets/changelog-git": "^0.1.14",
-		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.0",
-		"@playwright/test": "1.30.0",
-		"@theguild/eslint-config": "^0.8.0",
-		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
-		"@vitest/coverage-c8": "^0.28.3",
-		"@vitest/ui": "^0.28.3",
-		"eslint-plugin-unused-imports": "^2.0.0",
-		"graphql": "^15.8.0",
-		"prettier": "^2.8.3",
-		"turbo": "^1.7.1",
-		"typescript": "^4.9",
-		"vite": "^4.0.4",
-		"vitest": "^0.28.3"
-	},
-	"dependencies": {
-		"fs-extra": "^10.1.0",
-		"jest-snapshot": "^29.4.1",
-		"memfs": "^3.4.7",
-		"recast": "^0.23.1"
-	}
+  "name": "example-sveltekit-todo",
+  "version": "0.13.0",
+  "private": true,
+  "scripts": {
+    "web": "vite dev",
+    "api": "node api.mjs",
+    "dev": "concurrently \"npm run web\" \"npm run api\" -n \"web,api\" -c \"green,magenta\"",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "1.3.9",
+    "concurrently": "^6.2.1",
+    "houdini": "1.0.0-next.14",
+    "houdini-svelte": "1.0.0-next.14",
+    "svelte": "^3.55.1",
+    "svelte-preprocess": "^5.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "graphql-yoga": "^3.3.0",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^5.11.2",
+    "ws": "^8.8.1"
+  },
+  "type": "module"
 }

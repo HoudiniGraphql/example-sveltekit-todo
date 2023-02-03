@@ -1,27 +1,15 @@
 {
-	"exclude": ["node_modules"],
-	"include": ["packages/**/*.ts"],
+	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"moduleResolution": "node",
-		"module": "es2020",
-		"lib": ["ES2021", "DOM", "ES2021.String"],
-		"target": "ESNext",
-		"isolatedModules": true,
-		"resolveJsonModule": true,
-		"sourceMap": false,
-		"declaration": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
 		"allowJs": true,
 		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
 		"strict": true,
-		"downlevelIteration": true,
-		"emitDeclarationOnly": true,
-		"baseUrl": "./packages/houdini",
-		"paths": {
-			"$houdini": ["../houdini/src"],
-			"$houdini/*": ["../houdini/src/*"]
-		}
+		"rootDirs": [".", "./.svelte-kit/types", "./$houdini/types"],
+		"noImplicitAny": true
 	}
 }

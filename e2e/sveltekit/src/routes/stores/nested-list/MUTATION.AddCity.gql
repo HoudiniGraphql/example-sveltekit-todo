@@ -1,6 +1,0 @@
-mutation AddCity($name: String!) {
-  addCity(name: $name) {
-    id
-    ...City_List_insert
-  }
-}

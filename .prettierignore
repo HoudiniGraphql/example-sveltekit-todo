@@ -1,6 +1,4 @@
-**/build/**
-README.md
-.github/**
-packages/*/package.json
-
-packages/houdini-svelte/src/runtime/index.ts
+.svelte/**
+static/**
+build/**
+node_modules/**

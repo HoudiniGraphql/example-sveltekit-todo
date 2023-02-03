@@ -1,6 +1,0 @@
-query usersListComp {
-  usersList(limit: 3, snapshot: "usersListComp") {
-    id
-    name
-  }
-}
